@@ -1,6 +1,6 @@
 require 'telegram/bot'
 
-@token = '6395073876:AAFqb-fk2AMn6qoVC3jWiFVq9nZ-AFfxjWY'
+@token = ''
 
 def bot_send(message)    
     Telegram::Bot::Client.run(@token) do |bot|

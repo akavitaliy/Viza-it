@@ -12,7 +12,7 @@ browser = Ferrum::Browser.new(
 )
 
 accounts = File.open("email.txt")
-password = '123456123aKa!'
+password = ''
 
 accounts.each do |account|
     6.times do
@@ -23,7 +23,7 @@ accounts.each do |account|
         puts '=' * 20
         login(browser, account, password)
         begin
-            cheak_day(browser)
+            cheak_day(browser, account)
         rescue => exception
             puts exception.message.colorize(:red)
             puts 'Ошибка!'.colorize(:red) 

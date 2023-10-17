@@ -43,7 +43,7 @@ def save_html(browser)
     browser.mhtml(path: "free-#{Time.now.strftime('%m-%d-%H-%M-%S-%Y')}.mhtml")
 end
 
-def cheak_day(browser)
+def cheak_day(browser, account)
     numb = 0
 
     if browser.at_css('.main_message.main_message_')
@@ -63,6 +63,8 @@ def cheak_day(browser)
                 end
             end
             puts "#{@time_start} - " + Time.now.strftime('%m-%d-%H:%M:%S').colorize(:yellow)
+            puts account
+            puts '=' * 20
             sleep 60
             browser.refresh
             sleep 3
