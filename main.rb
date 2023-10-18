@@ -12,7 +12,7 @@ browser = Ferrum::Browser.new(
 )
 
 accounts = File.open("email.txt")
-password = ''
+password = '123456123aKa!'
 
 accounts.each do |account|
     6.times do
