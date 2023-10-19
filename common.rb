@@ -10,7 +10,7 @@ def screenshot(browser)
         sleep 3
         if browser.at_css('.container')
             sleep 3
-            browser.screenshot(path: "#{Time.now.strftime('%m-%d-%H-%M-%S-%Y')}.png")
+            #browser.screenshot(path: "#{Time.now.strftime('%m-%d-%H-%M-%S-%Y')}.png")
             break
         end
     end
@@ -65,9 +65,7 @@ def cheak_day(browser, account)
                         puts 'Класс изменился!'.colorize(:green)
                         message = "#{day.text.to_s} - #{time.text.to_s} - #{time.attribute('class').to_s}"
                         bot_send(message)
-                        save_html(browser)
-                        gets
-                        puts '### Пауза ###'
+                        save_html(browser)                        
                     end
                 end
             end

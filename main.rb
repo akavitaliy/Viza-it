@@ -6,7 +6,8 @@ browser = Ferrum::Browser.new(
     browser_path: "/usr/bin/google-chrome", 
     headless: false, 
     browser_options: { "disable-blink-features": "AutomationControlled", 'no-sandbox':nil, 'incognito':nil }, 
-    process_timeout: 160
+    process_timeout: 160,
+    window_size: [1366, 768]
     #xvfb: true,
     #extensions: ['stealth.min.js']    
 )
